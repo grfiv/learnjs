@@ -24,9 +24,12 @@
 
             var allroutes = function() {
                 var route = window.location.hash.slice(2);
+
+                // tags to hide
                 var sections = $('section');
                 var section;
 
+                // tag to show
                 section = sections.filter('[data-route=' + route + ']');
 
                 if (section.length) {

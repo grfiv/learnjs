@@ -1,6 +1,7 @@
 describe('LearnJS', function() {
 
     it('can show a problem view', function() {
+        //spyOn(learnjs, 'showView');
         learnjs.showView('#problem-1');
         expect($('.view-container .problem-view').length).toEqual(1);
     });
@@ -18,8 +19,10 @@ describe('LearnJS', function() {
 
     describe('problem view', function() {
         it('has a title that includes the problem number', function() {
-            var view = learnjs.problemView('1');
-            expect(view.text()).toEqual('Problem #1 Coming Soon!');
+            var view = learnjs.problemView('2');
+
+            expect(view.text()).toContain('Problem #2');//.toEqual
+            //expect(view.text()).toContain('Problem #');
         });
     });
 
